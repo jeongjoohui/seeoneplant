@@ -1,0 +1,11 @@
+<query id="updateRefererLogDocumentSrlIfNull" action="update">
+	<tables>
+		<table name="referer_log" />
+	</tables>
+	<columns>
+		<column name="ref_document_srl" var="ref_document_srl" default="-1" notnull="notnull" />
+	</columns>
+	<conditions>
+		<condition operation="null" column="ref_document_srl" />
+	</conditions>
+</query>

@@ -1,0 +1,58 @@
+<div id="skip" class="skip-navigation">
+    <a href="#gnb">메뉴 바로가기</a>
+    <a href="#content">컨텐츠 바로가기</a>
+</div>
+<header id="header" class="main-header">
+    <div class="header-top">
+        <div class="top-bnr__left">
+            <p class="fz22 fw_400">임플란트 수술</p>
+            <div class="top-bnr__left-bg">
+                <div class="odometer top-counter" data-case="{$layout_info->case_count}"|cond="$layout_info->case_count">12000</div>
+                <div class="top-bnr__left-txt">
+                    <p class="fz20 fw_500">건 누적식립</p>
+                    <p class="fz18 c_g"><span>{$layout_info->case_year}</span>.<span>{$layout_info->case_month}</span>기준</p>
+                </div>
+            </div>
+        </div>
+        <h1 class="logo"><a href="/seeone" class="ir">시원플란트치과 see one plant dental</a></h1>
+        <div class="swiper-container top-bnr__right">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/top-bnr__right-slide01-200804.png" alt="치주과전문의 대표원장 상주진료">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/top-bnr__right-slide03.png" alt="보존과전문의 대표원장 협진 진료">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/top-bnr__right-slide02.png" alt="3호선 불광역 1번,2번출구">
+                </div>
+            </div>
+            <div class="ctrls prev"></div>
+            <div class="ctrls next"></div>
+        </div>
+        <div class="log_menu">
+            <a class="join" href="{getUrl('act','dispMemberSignUpForm')}" cond="!$logged_info">회원가입</a>
+            <a class="login" href="{getUrl('act','dispMemberLoginForm')}" cond="!$logged_info">로그인</a>
+            <a class="logout" href="{getUrl('act', 'dispMemberLogout')}" cond="$logged_info">로그아웃</a>
+            <a class="management" href="/index.php?module=admin" cond="$logged_info->is_admin">관리자</a>
+        </div>
+    </div>
+    <nav id="gnb">
+        <ul class="">
+            <block loop="$gnb->list=>$key1,$val1">
+                {@ $menu_idx++}
+                <li class="active"|cond="$val1['selected']">
+                    <a href="{$val1['href']}">{$val1['link']}</a>
+                    <ul class="depth2 idx_{$menu_idx}" cond="$val1['list']">
+                        {@ $submenu_idx++}
+                        <li loop="$val1['list']=>$key2,$val2" class="active"|cond="$val2['selected']">
+                            <a href="{$val2['href']}" target="_blank"|cond="$val2['open_window']=='Y'">
+                                <span>{$val2['link']}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </block>
+        </ul>
+    </nav>
+</header>

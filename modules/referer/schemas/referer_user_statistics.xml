@@ -1,0 +1,4 @@
+<table name="referer_user_statistics">
+    <column name="member_srl" type="number" size="11" notnull="notnull" primary_key="PRIMARY" />
+    <column name="count" type="number" size="11" default="0" />
+</table>

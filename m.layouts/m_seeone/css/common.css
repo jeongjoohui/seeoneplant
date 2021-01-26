@@ -1,0 +1,89 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700&display=swap&subset=korean');
+
+/* reset */
+body,  h1, h2, h3, h4, h5, p, ul, address, th, td, button {margin: 0; padding: 0}
+body {font-size: 14px; font-family: 'Noto Sans KR', '본고딕', 'NanumGothic', '나눔고딕', 'Gulim', '굴림'; font-weight: 300; line-height: 1; color: #414141;}
+h1, h2, h3, h4, h5 {font-weight: inherit; font-size: inherit}
+ul {list-style: none}
+a:hover, a:link, a:visited, a:active {text-decoration: none; color: inherit}
+input[type="text"] {border: 1px solid #aaa}
+input, button{font-family: inherit;font-size: inherit;color: inherit}
+button {cursor: pointer; background: none; border: none}
+address {font-style: normal}
+img {vertical-align: top; border: none; max-width: 100%; height: auto}
+header, nav, section, article, footer {display: block}
+strong {font-weight: 500;}
+
+
+/* 공통클래스 */
+/* .wrap {min-width: 1280px; margin:0 auto; position: relative;} */
+.blind {font-size: 0; line-height: 0; width: 1px; height: 1px; line-height: 1px; text-align: -9999px; overflow: hidden; position: absolute; top: 0; left: -9999px}
+.clear:after {content: ""; display: block; clear: both}
+.p_r {position: relative}
+.p_a {position: absolute}
+.f_l {float: left}
+.f_r {float: right}
+.dp_f{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.dp_sb{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between
+}
+.dp_c{
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.dp_wrap{flex-wrap:wrap; }
+.dp_ib{display: inline-block;}
+.tl{text-align: left;}
+.tc{text-align: center;}
+.tr{text-align: right;}
+.inner1{padding:0 5%;}
+.cnt-inner{ max-width:480px; box-sizing: border-box; margin:0 auto;}
+.c_w{color: #fff;}
+.c_g{color: #adadad;}
+.c_bk{color: #2e2e2e;}
+.c_grn{color: #005b4c;}
+.c_gold{color: #d89021;}
+.c_blue{color:#42afdf;}
+
+
+
+.bold{font-weight: 700;}
+.medi{font-weight: 500;}
+.normal{font-weight: normal; font-style:normal;}
+.shadow {text-shadow: 3px 3px 5px rgba(0,0,0,0.2);}
+.upc{text-transform: uppercase}
+
+.blue_box{display:inline-block; background: #012d40; padding: 0 4px; color: #fff;}
+.ylw_box{display:inline-block; background: #fdb436; padding: 0 4px; color: #fff;}
+
+
+.m_12{margin-bottom: 12px;}
+.m_20{margin-bottom: 20px;}
+.m_32{margin-bottom: 32px;}
+.m_48{margin-bottom: 48px;}
+.m_60{margin-bottom: 60px;}
+.m_100{margin-bottom: 100px;}
+
+
+.p3{font-size: 0.85em; line-height: 1.6; word-break: keep-all; }
+.p2{font-size: 0.9em; line-height: 1.6; word-break: keep-all; letter-spacing: -0.015em;}
+.p1{font-size: 1em; line-height: 1.6; word-break: keep-all; letter-spacing: -0.020em;}
+.h6{font-size: 1.2em; line-height: 1.5; letter-spacing: -0.025em;}
+.h5{font-size: 1.3em;line-height: 1.4; letter-spacing: -0.025em;}
+.h4{font-size: 1.425em;line-height: 1.4; letter-spacing: -0.025em;}
+.h3{font-size: 1.6em;line-height: 1.4;}
+.h2{font-size: 1.75em;line-height: 1.4;}
+.h1{font-size: 1.9em;line-height: 1.4;}

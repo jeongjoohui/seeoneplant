@@ -1,0 +1,11 @@
+<query id="updateRefererPageStatisticsDocumentSrlIfNull" action="update">
+	<tables>
+		<table name="referer_page_statistics" />
+	</tables>
+	<columns>
+		<column name="ref_document_srl" var="ref_document_srl" default="-1" notnull="notnull" />
+	</columns>
+	<conditions>
+		<condition operation="null" column="ref_document_srl" />
+	</conditions>
+</query>

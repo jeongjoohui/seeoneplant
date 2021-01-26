@@ -1,0 +1,39 @@
+.txtline{position: relative;}
+.txtline > *{overflow: hidden; display: block;}
+.txtline > h2:nth-child(2) .txt-ani{transition-delay: .05s;}
+.txtline > h2:nth-child(3) .txt-ani{transition-delay: .1s;}
+.txtline > h2:nth-child(4) .txt-ani{transition-delay: .15s;}
+
+.txtline > span:nth-child(2) .txt-ani{transition-delay: .05s;}
+.txtline > span:nth-child(3) .txt-ani{transition-delay: .1s;}
+.txtline > span:nth-child(4) .txt-ani{transition-delay: .15s;}
+
+.txtline .txt-ani{display: block; transition-duration: .45s; transition-property: transform; transform: translateY(100%)}
+.txtline.on .txt-ani{transform: translateY(0)}
+.delay-100{transition-delay: .1s}
+.delay-200{transition-delay: .2s}
+.delay-300{transition-delay: .3s}
+.delay-400{transition-delay: .4s}
+.delay-500{transition-delay: .5s}
+.delay-600{transition-delay: .6s}
+.delay-700{transition-delay: .7s}
+.delay-800{transition-delay: .8s}
+.delay-900{transition-delay: .9s}
+.delay-1000{transition-delay: 1.0s}
+
+.dura-100{transition-duration: .1s}
+.dura-200{transition-duration: .2s}
+.dura-300{transition-duration: .3s}
+.dura-400{transition-duration: .4s}
+.dura-500{transition-duration: .5s}
+.dura-600{transition-duration: .6s}
+.dura-700{transition-duration: .7s}
+.dura-800{transition-duration: .8s}
+.dura-900{transition-duration: .9s}
+.dura-1000{transition-duration: 1.0s}
+
+/* 슬라이더 효과 */
+.main-slider .title{position: relative;}
+.main-slider .title>*{overflow: hidden; display: block;}
+.main-slider .title .txt-ani{display: block; transition-duration: .6s; transition-property: transform; transform: translateY(100%)}
+.main-slider .swiper-slide-active .txt-ani{transform: translateY(0)}

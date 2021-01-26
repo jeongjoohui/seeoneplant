@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <title xml:lang="ko">시원플란트치과 레이아웃</title>
+
+    <description xml:lang="ko">
+        시원플란트치과 메인 사이트 레이아웃입니다.
+        제작 : FineapplePTL
+    </description>
+    
+    <version>1.0</version>
+    <date>2020-07-31</date>
+
+    <author email_address="">
+        <name xml:lang="ko"></name>
+    </author>
+
+    <extra_vars>
+        <var name="type" type="select">
+            <title>레이아웃 타입</title>
+            <options value="main">
+                <title>메인 레이아웃</title>
+            </options>
+            <options value="sub">
+                <title>서브 레이아웃</title>
+            </options>
+        </var>
+        <var name="case_count" type="text">
+            <title xml:lang="ko">누적 식립 건수</title>
+            <description xml:lang="ko">임플란트 수술 누적 식립 건수를 입력해주세요.</description>
+        </var>
+        <var name="case_year" type="text">
+            <title xml:lang="ko">누적 식립 기준 년도</title>
+            <description xml:lang="ko">임플란트 수술 누적 식립 기준 년도를 입력해주세요.</description>
+        </var>
+        <var name="case_month" type="text">
+            <title xml:lang="ko">누적 식립 기준 월</title>
+            <description xml:lang="ko">임플란트 수술 누적 식립 기준 월을 입력해주세요.</description>
+        </var>
+    </extra_vars>
+    <menus>
+        <menu name="gnb" maxdepth="3" default="true">
+            <title xml:lang="ko">상단 메뉴</title>
+        </menu>
+    </menus>
+</layout>

@@ -1,0 +1,37 @@
+<!-- Header
+------------------------------------------------------>
+<header class="header trs <!--@if($mid=='case')-->board<!--@else if($mid=='notice')-->board<!--@end-->">
+    <div class="header-wrap dp_f dp_sb">
+			<h1 class="logo"><a href="/seeone" class="ir">시원플란트치과의원 See One Plant Dental Clinic</a></h1>
+			<!-- toggle -->
+			<div class="header-rt dp_f dp_c">
+				<!-- call -->
+				<a href="tel:023845454" class="call ir">문의전화 02-384-5454</a>
+				<div class="toggle-bg">
+					<button class="toggle">
+						<span class="trs"></span>
+						<span class="trs"></span>
+						<span class="trs"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+</header>
+
+<!-- GNB
+------------------------------------------------------>
+<nav class="nav trs">
+	<div class="nav-cover"></div>
+	<a href="tel:023845454" class="nav-call">시원플란트치과의원 <em>02) 384-5454</em></a>
+	<ul class="gnb">
+		<li loop="$global_menu->list=>$key1,$val1" class="on"|cond="$val1['selected']">
+			<a href="{$val1['href']}">{$val1['link']}</a>
+			<ul cond="$val1['list']" class="depth2">
+				<li loop="$val1['list']=>$key2,$val2" class="on"|cond="$val2['selected']">
+					<a href="{$val2['href']}">{$val2['link']}</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<h1 class="nav-logo"><a href="/seeone" class="ir">시원플란트치과의원 See One Plant Dental Clinic</a></h1>
+</nav>

@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Arita buri';
+    src: url('Arita-buri-Medium_OTF00.eot');
+    src: url('Arita-buri-Medium_OTF00.eot?#iefix') format('embedded-opentype'),
+        url('Arita-buri-Medium_OTF00.woff2') format('woff2'),
+        url('Arita-buri-Medium_OTF00.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arita buri';
+    src: url('Arita-buri-SemiBold_OTF00.eot');
+    src: url('Arita-buri-SemiBold_OTF00.eot?#iefix') format('embedded-opentype'),
+        url('Arita-buri-SemiBold_OTF00.woff2') format('woff2'),
+        url('Arita-buri-SemiBold_OTF00.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+

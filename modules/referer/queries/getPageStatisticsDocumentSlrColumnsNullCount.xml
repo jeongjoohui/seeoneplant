@@ -1,0 +1,11 @@
+<query id="getPageStatisticsDocumentSlrColumnsNullCount" action="select">
+	<tables>
+		<table name="referer_page_statistics" />
+	</tables>
+    <columns>
+        <column name="count(*)" alias="count" />
+    </columns>
+	<conditions>
+		<condition operation="null" column="ref_document_srl" />
+	</conditions>
+</query>

@@ -1,0 +1,23 @@
+		function getGeoIP_geoipxe() {
+			$.each(oFlag, function(ip, arrID) {
+				$.exec_json('geoipxe.dispGeoipxeData', {ip:ip}, function(ret_obj) {
+					$.each(arrID, function(i, id) {
+						$('#'+id).addClass(ret_obj.location.country_code);
+						var a_info = '';
+						if(ret_obj.location.city != undefined) a_info = ret_obj.location.city;
+						if(ret_obj.location.region != undefined) {
+							if (a_info != '') a_info += ', ';
+							a_info += ret_obj.location.region;
+						}
+						if (a_info != '') a_info = ' (' + a_info + ')';
+						$('#'+id).attr('title', ret_obj.location.country + a_info);
+
+						$('#'+id).css('display', 'inline-block');
+					});
+					if(++done >= total) spinner.stop();
+				}, function(error) {
+					console.log(error);
+					if(++done >= total) spinner.stop();
+				});
+			});
+		}

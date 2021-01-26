@@ -1,0 +1,22 @@
+<?php if(!defined("__XE__"))exit;?>		function getGeoIP_ipapi() {
+			function callAjax_ipapi() {
+				ip = Object.keys(oFlag)[0];
+				arrID = oFlag[ip];
+				delete oFlag[ip];
+				$.getJSON('http://ip-api.com/json/'+ip+'?callback=?', function(location) {
+					$.each(arrID, function(i, id) {
+						$('#'+id).addClass(location.countryCode);
+						$('#'+id).attr('title', location.country + ' (' + location.city + ', ' + location.regionName + ', ISP: ' + location.isp + ')');
+						$('#'+id).css('display', 'inline-block');
+					});
+				})
+				.fail(function( jqxhr, textStatus, error ) {
+				    console.log( "Request Failed: " + textStatus + ", " + error );
+				})
+				.always(function() {
+					if(++done < total) setTimeout(callAjax_ipapi, 200);
+					else spinner.stop(); 
+				});
+			}
+			callAjax_ipapi();
+		}

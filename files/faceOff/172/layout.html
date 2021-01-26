@@ -1,0 +1,25 @@
+<include target="include.html" />
+<include target="header.html" />
+
+<div class="video-bg" id="bg">
+    <iframe src="https://player.vimeo.com/video/442971463?background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <div class="overlay"></div>
+</div>
+<main class="main-content" id="content">
+    <div class="case-bg <!--@if($mid=='notice')-->notice<!--@else--><!--@end-->">
+        <div class="title c_w ta_c">
+            <h2 class="h2 m_24">시원플란트치과 <em>{$module_info->browser_title}</em></h2>
+            <!--@if($mid=='case')-->
+            <p class="fz18 c_g">소중한 시원플란트 치과 고객님의 치료사례입니다</p>
+            <!--@else-->
+            <p class="fz18 c_g">시원플란트 공지사항 및 이벤트 입니다</p>
+            <!--@end-->
+        </div>
+    </div>
+    <div class="case-wrap">
+        <div class="container">
+            {$content}
+        </div>
+    </div>
+</main>
+<include target="footer.html" />

@@ -1,0 +1,16 @@
+<include target="include.html" />
+
+<body>
+<include target="header.html" />
+<!-- Contents
+------------------------------------------------------>
+<div class="mwrap trs <!--@if($mid=='case')-->board<!--@else if($mid=='notice')-->board<!--@end-->">{$content}</div>
+<include target="footer.html" />
+<include target="../../popup/mpopup.html" cond="$mid==='romeo' || $mid==='main'" />
+
+<!--
+<span itemscope="" itemtype="http://schema.org/Organization">
+ <link itemprop="url" href="http://www.thewookdental.co.kr">
+ <a itemprop="sameAs" href="https://blog.naver.com/thewookdental"></a>
+</span>-->
+</body>

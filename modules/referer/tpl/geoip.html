@@ -1,0 +1,59 @@
+<!--@if($refererConfig->use_geoip_admin != "no")-->
+<div id="loading"></div>
+<input id="GeoIPSite" type="hidden" value="auto"/>
+<script type="text/javascript">// <![CDATA[
+jQuery(function($){
+	var oFlag = new Object();
+	var opts = {
+		left:$('.table').position().left+$('.table').width()/2+'px',
+		top:$('.table').offset().top+'px'
+	}
+	var target = document.getElementById('loading');
+	var spinner = new Spinner(opts);
+	var done = 0;
+	var total = 0;
+	
+	$('.flag').each(function() {
+		if (typeof $(this).attr('ip') != 'undefined') {
+			if(oFlag[$(this).attr('ip')] === undefined) {
+				oFlag[$(this).attr('ip')] = [];
+				++total;
+			}
+			oFlag[$(this).attr('ip')].push($(this).attr('id'));
+		}
+		else if (typeof $(this).attr('domain') != 'undefined') {
+			if(oFlag[$(this).attr('domain')] === undefined) {
+				oFlag[$(this).attr('domain')] = [];
+				++total;
+			}
+			oFlag[$(this).attr('domain')].push($(this).attr('id'));
+		}
+	});
+
+	if(total) {
+		spinner.spin(target);
+<include target="geoip_geoipxe.html" cond="$refererConfig->GeoIPSite == 'geoipxe'" />
+<include target="geoip_ipapi.html" cond="($refererConfig->GeoIPSite == 'auto' || $refererConfig->GeoIPSite == 'ipapi')" />
+<include target="geoip_petabyet.html" cond="($refererConfig->GeoIPSite == 'auto' || $refererConfig->GeoIPSite == 'petabyet')" />
+<include target="geoip_ipsb.html" cond="($refererConfig->GeoIPSite == 'auto' || $refererConfig->GeoIPSite == 'ipsb')" />
+<include target="geoip_ipdata.html" cond="($refererConfig->GeoIPSite == 'auto' || $refererConfig->GeoIPSite == 'ipdata')" />
+<include target="geoip_geoipdb.html" cond="($refererConfig->GeoIPSite == 'auto' || $refererConfig->GeoIPSite == 'geoipdb')" />
+<include target="geoip_geojs.html" cond="($refererConfig->GeoIPSite == 'auto' || $refererConfig->GeoIPSite == 'geojs')" />
+<include target="geoip_nekudo.html" cond="($refererConfig->GeoIPSite == 'auto' || $refererConfig->GeoIPSite == 'nekudo')" />
+<include target="geoip_cdnservice.html" cond="($refererConfig->GeoIPSite == 'auto' || $refererConfig->GeoIPSite == 'cdnservice')" />
+<include target="geoip_pingadvisor.html" cond="($refererConfig->GeoIPSite == 'auto' || $refererConfig->GeoIPSite == 'pingadvisor')" />
+{@if($refererConfig->GeoIPSite=='geoipxe') echo "getGeoIP_geoipxe();";}
+{@if($refererConfig->GeoIPSite=='ipapi') echo "getGeoIP_ipapi();";}
+{@if($refererConfig->GeoIPSite=='petabyet') echo "getGeoIP_petabyet();";}
+{@if($refererConfig->GeoIPSite=='ipsb') echo "getGeoIP_ipsb();";}
+{@if($refererConfig->GeoIPSite=='ipdata') echo "getGeoIP_ipdata();";}
+{@if($refererConfig->GeoIPSite=='geoipdb') echo "getGeoIP_geoipdb();";}
+{@if($refererConfig->GeoIPSite=='geojs') echo "getGeoIP_geojs();";}
+{@if($refererConfig->GeoIPSite=='nekudo') echo "getGeoIP_nekudo();";}
+{@if($refererConfig->GeoIPSite=='cdnservice') echo "getGeoIP_cdnservice();";}
+{@if($refererConfig->GeoIPSite=='pingadvisor') echo "getGeoIP_pingadvisor();";}
+<include target="geoip_auto.html" cond="($refererConfig->GeoIPSite == 'auto')" />
+	}
+});
+// ]]></script>
+<!--@end-->

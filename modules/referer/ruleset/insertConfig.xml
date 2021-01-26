@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ruleset version="1.5.0">
+    <customrules>
+    </customrules>
+    <fields>
+		<field name="timeout" rule="number" default="500" required="true" />
+		<field name="timeout_log" rule="number" default="500" required="true" />
+    </fields>
+</ruleset>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+    <grants />
+    <permissions />
+    <actions>
+        <action name="procRefererExecute" type="controller" />
+        <action name="dispRefererAdminIndex" type="view" admin_index="true" />
+        <action name="dispRefererAdminRanking" type="view" />
+        <action name="dispRefererAdminRemoteRanking" type="view" />
+        <action name="dispRefererAdminUserRanking" type="view" />
+        <action name="dispRefererAdminPageRanking" type="view" />
+        <action name="dispRefererAdminCountryRanking" type="view" />
+        <action name="dispRefererAdminUAgentRanking" type="view" />
+        <action name="dispRefererAdminUAgentStat" type="view" />
+        <action name="dispRefererAdminConfirmReset" type="view" />
+        <action name="dispRefererAdminDeleteStat" type="view" />
+        <action name="dispRefererAdminDeleteRemoteStat" type="view" />
+        <action name="dispRefererAdminDeleteUserStat" type="view" />
+        <action name="dispRefererAdminDeletePageStat" type="view" />
+        <action name="dispRefererAdminDeleteCountryStat" type="view" />
+        <action name="dispRefererAdminDeleteUAgentStat" type="view" />
+        <action name="dispRefererAdminResetData" type="view" />
+		<action name="dispRefererAdminConfig" type="view" />
+		<action name="dispRefererAdminBenchmark" type="view" />
+        <action name="procRefererAdminDeleteStat" type="controller" />
+        <action name="procRefererAdminResetData" type="controller" />
+ 		<action name="procRefererAdminInsertConfig" type="controller" ruleset="insertConfig" />
+   </actions>
+</module>

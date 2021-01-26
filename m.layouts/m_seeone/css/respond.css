@@ -1,0 +1,62 @@
+@media only screen and (orientation: landscape) {
+	#cnt0{height: 100vh;}
+    .nav {
+        width: 40vw;
+    }
+
+    .nav-cover {
+        height: 23vw;
+    }
+    
+    .header.x, .mwrap.x, .footer.x, .top-btn.x, .event.x {transform: translateX(-40%);}
+    .quick.x {display: none;}
+    
+
+    
+
+    .visual01 .visual-desc img {width: 30%;}
+    .visual02 .visual-desc, .visual03 .visual-desc {margin: 18% auto 0;}
+    .visual03 .visual-desc {margin: 14% auto 0;}
+
+    #cnt0 .video-background iframe {height: 100vw;}
+    .footer {padding: 6% 5% 14%;}
+	
+	
+}
+
+
+
+/* 320 iphone5s */
+@media screen and (max-width: 320px) {
+	body{font-size: 12px}
+}
+/* 360 android */
+@media screen and (max-width: 360px) {
+	body{font-size: 13px}
+}
+
+/* 480HD */
+@media screen and (min-width: 480px) {}
+
+
+/* 640HD */
+@media screen and (min-width: 640px) {}
+
+/* 640HD */
+@media screen and (min-width: 1024px) {
+    .btn1 {width: 100px; height: 100px;}
+}
+
+
+
+@media only screen and (orientation: portrait) and (min-width: 480px) {
+    .visual-desc {margin: 24% 0 0 10%;}
+    .visual02 .visual-desc, .visual03 .visual-desc {margin: 40% auto 0;}
+    .visual03 .visual-desc {margin: 36% auto 0;}
+}
+
+
+
+@media only screen and (orientation: portrait) and (min-width: 640px) {
+    .btn1 {bottom: 15%; width: 120px; height: 120px;}
+}
